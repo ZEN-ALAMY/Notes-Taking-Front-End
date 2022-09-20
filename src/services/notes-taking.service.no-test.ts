@@ -10,34 +10,34 @@ describe("Notes taking service tests", () => {
     moxios.uninstall();
   });
 
-  // it("should make api call correctly", async () => {
-  //   const expectedData = [
-  //     { date: "19-09-2022", relevance: "Not relevant", title: "My Notes" },
-  //   ];
+  it("should make api call correctly", async () => {
+    const expectedData = [
+      { date: "19-09-2022", relevance: "Not relevant", title: "My Notes" },
+    ];
 
-  //   moxios.stubRequest(/all/i, {
-  //     status: 200,
-  //     data: expectedData,
-  //   });
+    moxios.stubRequest(/all/i, {
+      status: 200,
+      data: expectedData,
+    });
 
-  //   const result = await getAllNotes();
+    const result = await getAllNotes();
 
-  //   expect(result).toEqual(expectedData);
-  // });
+    expect(result).toEqual(expectedData);
+  });
 
-  // it("should make post api call correctly", async () => {
-  //   const postData = {
-  //     date: "19-09-2022",
-  //     relevance: "Not relevant",
-  //     title: "My Notes",
-  //   };
+  it("should make post api call correctly", async () => {
+    const postData = {
+      date: "19-09-2022",
+      relevance: "Not relevant",
+      title: "My Notes",
+    };
 
-  //   moxios.stubRequest(/add/i, {
-  //     status: 200,
-  //     data: { result: "Reached" },
-  //   });
+    moxios.stubRequest(/add/i, {
+      status: 200,
+      data: { result: "Reached" },
+    });
 
-  //   const result = await addNote(postData);
-  //   expect(result).toBe(true);
-  // });
+    const result = await addNote(postData);
+    expect(result).toBe(true);
+  });
 });
