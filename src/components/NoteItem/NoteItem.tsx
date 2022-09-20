@@ -1,4 +1,7 @@
-function NoteItem(props) {
+import { FunctionComponent } from "react";
+import { Note } from "../../types/Note";
+
+const NoteItem: FunctionComponent<Note> = (props) => {
   return (
     <div className="flex xl:flex-row sm:flex-col flex-col bg-gray-300 xl:h-[70px] sm:h-[120px] h-120px my-[30px] xl:w-[95%] sm:w-[70%] w-[80%] mx-auto rounded-xl xl:items-center sm:justify-evenly justify-evenlyr">
       <div className="xl:w-[33.33%] ml-[5px]">
@@ -12,6 +15,6 @@ function NoteItem(props) {
       </div>
     </div>
   );
-}
+};
 
 export default NoteItem;

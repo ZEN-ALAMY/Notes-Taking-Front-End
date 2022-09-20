@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { addNote } from "../../services/notes-taking.service";
 
 function Input() {
   const [values, setValues] = useState({
@@ -12,18 +13,9 @@ function Input() {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    console.log(values.title, values.date, values.relevance);
-    const response = await fetch("http://localhost:5000/api/add", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({
-        title: values.title,
-        date: values.date,
-        relevance: values.relevance,
-      }),
-    });
+
+    console.log(values);
+    const response = await addNote(values);
     // const responseData = await response.json();
     setValues({ ...values, title: "", date: "", relevance: "" });
   };
@@ -55,7 +47,6 @@ function Input() {
           className="w-[300px] xl:w-[500px] sm:w-[400px] h-[70px]  mx-auto my-[20px] rounded-lg border-[3px] border-black border-solid"
           type="text"
           value={values.relevance}
-          placeholder="RELEVANCE"
           name="relevance"
           onChange={(event) => {
             setValues({ ...values, relevance: event.target.value });

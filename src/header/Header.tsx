@@ -1,12 +1,7 @@
-import React from "react";
-
-//mport { NavLink } from "react-router-dom";
-
-//import NavItem from "./NavItem";
-
+import { FunctionComponent } from "react";
 import Link from "next/link";
 
-function Header() {
+const Header: FunctionComponent = () => {
   return (
     <div className="bg-green-500 sm:bg-red-500 xl:bg-blue-500 h-[21%] flex flex-col  items-center justify-evenly text-black font-mono font-black ">
       <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold">
@@ -52,6 +47,6 @@ function Header() {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create note form tests should render the UI correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="xl:w-[650px] sm:w-[360px] h-[480px]  rounded-2xl mt-12 mx-auto"
+  >
+    <form
+      class="flex flex-col"
+    >
+      <input
+        class="w-[300px] xl:w-[500px] sm:w-[400px] h-[70px] mx-auto my-[20px] rounded-lg border-[3px] border-black border-solid mt-[40px]"
+        name="firstName"
+        placeholder="NOTES TITLE"
+        required=""
+        type="text"
+        value=""
+      />
+      <input
+        class="w-[300px] xl:w-[500px] sm:w-[400px] h-[70px] mx-auto my-[20px] rounded-lg border-[3px] border-black border-solid"
+        name="date"
+        placeholder="DATE"
+        type="text"
+        value=""
+      />
+      <input
+        class="w-[300px] xl:w-[500px] sm:w-[400px] h-[70px]  mx-auto my-[20px] rounded-lg border-[3px] border-black border-solid"
+        name="relevance"
+        type="text"
+        value=""
+      />
+      <button
+        class="w-[200px] mx-auto mb-[30px] mt-[10px] h-[60px] bg-green-500 sm:bg-red-500 xl:bg-blue-500 text-black rounded-xl font-extrabold text-lg"
+        type="submit"
+      >
+        SUBMIT
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
